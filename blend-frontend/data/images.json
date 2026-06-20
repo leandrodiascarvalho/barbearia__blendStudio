@@ -1,0 +1,173 @@
+{
+  "project": "Blend Studio",
+  "version": "1.0.0",
+  "images": {
+    "hero": {
+      "file": "images/hero.jpg",
+      "alt": "Blend Studio — barbearia masculina premium em Poços de Caldas",
+      "used_in": ["index.html"]
+    },
+    "about_cut": {
+      "file": "images/about-cut.jpg",
+      "alt": "Barbeiro realizando corte masculino na Blend Studio",
+      "used_in": ["index.html", "about.html"]
+    },
+    "about_lounge": {
+      "file": "images/about-lounge.jpg",
+      "alt": "Área de lounge da Blend Studio",
+      "used_in": ["index.html", "about.html"]
+    },
+    "lounge_kids": {
+      "file": "images/lounge-kids.jpg",
+      "alt": "Espaço kids da Blend Studio com área lúdica para crianças",
+      "used_in": ["index.html", "about.html"]
+    },
+    "about_internal": {
+      "file": "images/about-internal.jpg",
+      "alt": "Ambiente interno da Blend Studio",
+      "used_in": ["about.html"]
+    },
+    "works": [
+      {
+        "id": "work_1",
+        "file": "images/work-1.jpg",
+        "alt": "Trabalho realizado na Blend Studio — corte masculino 1",
+        "used_in": ["index.html", "servicos.html"]
+      },
+      {
+        "id": "work_2",
+        "file": "images/work-2.jpg",
+        "alt": "Trabalho realizado na Blend Studio — corte masculino 2",
+        "used_in": ["index.html", "servicos.html"]
+      },
+      {
+        "id": "work_3",
+        "file": "images/work-3.jpg",
+        "alt": "Trabalho realizado na Blend Studio — barba 3",
+        "used_in": ["index.html", "servicos.html"]
+      },
+      {
+        "id": "work_4",
+        "file": "images/work-4.jpg",
+        "alt": "Trabalho realizado na Blend Studio — degradê 4",
+        "used_in": ["index.html", "servicos.html"]
+      }
+    ],
+    "barbers": [
+      {
+        "id": "barber_1",
+        "file": "images/barber-1.jpg",
+        "alt": "Barbeiro especialista em cortes clássicos e executivos",
+        "name": "[Nome do Barbeiro 1]",
+        "role": "Cortes Clássicos & Executivos",
+        "used_in": ["index.html", "about.html", "servicos.html"]
+      },
+      {
+        "id": "barber_2",
+        "file": "images/barber-2.jpg",
+        "alt": "Barbeiro especialista em barba e grooming",
+        "name": "[Nome do Barbeiro 2]",
+        "role": "Barba & Grooming",
+        "used_in": ["index.html", "about.html", "servicos.html"]
+      },
+      {
+        "id": "barber_3",
+        "file": "images/barber-3.jpg",
+        "alt": "Barbeiro especialista em degradê e designs",
+        "name": "[Nome do Barbeiro 3]",
+        "role": "Fade & Designs",
+        "used_in": ["index.html", "about.html", "servicos.html"]
+      }
+    ],
+    "about_barbers": [
+      {
+        "id": "about_barber_1",
+        "file": "images/about-barber-1.jpg",
+        "alt": "Barbeiro 1 da Blend Studio — foto de perfil",
+        "used_in": ["about.html"]
+      },
+      {
+        "id": "about_barber_2",
+        "file": "images/about-barber-2.jpg",
+        "alt": "Barbeiro 2 da Blend Studio — foto de perfil",
+        "used_in": ["about.html"]
+      },
+      {
+        "id": "about_barber_3",
+        "file": "images/about-barber-3.jpg",
+        "alt": "Barbeiro 3 da Blend Studio — foto de perfil",
+        "used_in": ["about.html"]
+      }
+    ],
+    "services": [
+      {
+        "id": "service_hero",
+        "file": "images/services-hero.jpg",
+        "alt": "Serviços da Blend Studio — banner principal",
+        "used_in": ["servicos.html"]
+      },
+      {
+        "id": "service_classic",
+        "file": "images/service-classic.jpg",
+        "alt": "Corte clássico masculino na Blend Studio",
+        "used_in": ["servicos.html"]
+      },
+      {
+        "id": "service_hairstyle",
+        "file": "images/service-hairstyle.jpg",
+        "alt": "Hairstyle moderno masculino na Blend Studio",
+        "used_in": ["servicos.html"]
+      },
+      {
+        "id": "service_flattop",
+        "file": "images/service-flattop.jpg",
+        "alt": "Flat top e fade na Blend Studio",
+        "used_in": ["servicos.html"]
+      },
+      {
+        "id": "service_beard",
+        "file": "images/service-beard.jpg",
+        "alt": "Barba completa na Blend Studio",
+        "used_in": ["servicos.html"]
+      },
+      {
+        "id": "service_fade",
+        "file": "images/service-fade.jpg",
+        "alt": "Degradê e fade na Blend Studio",
+        "used_in": ["servicos.html"]
+      },
+      {
+        "id": "service_designs",
+        "file": "images/service-designs.jpg",
+        "alt": "Riscos e designs na Blend Studio",
+        "used_in": ["servicos.html"]
+      }
+    ],
+    "pages": {
+      "booking_hero": {
+        "file": "images/booking-hero.jpg",
+        "alt": "Agendamento na Blend Studio — banner",
+        "used_in": ["agendamento.html"]
+      },
+      "contact_hero": {
+        "file": "images/contact-hero.jpg",
+        "alt": "Contato Blend Studio — banner",
+        "used_in": ["contact.html"]
+      }
+    },
+    "extras": [
+      {
+        "id": "extra_1",
+        "file": "images/extra-1.jpg",
+        "alt": "Imagem extra Blend Studio",
+        "used_in": []
+      },
+      {
+        "id": "extra_2",
+        "file": "images/extra-2.jpg",
+        "alt": "Imagem extra Blend Studio",
+        "used_in": []
+      }
+    ]
+  }
+}

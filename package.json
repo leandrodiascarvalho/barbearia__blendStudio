@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "scss:watch": "sass --watch blend-frontend/scss:blend-frontend/css",
+    "backend:install": "npm --prefix blend-backend install",
+    "backend:dev": "npm --prefix blend-backend run dev",
+    "backend:start": "npm --prefix blend-backend start",
+    "dev": "concurrently \"npm run scss:watch\" \"npm run backend:dev\""
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.3",
+    "sass": "^1.101.0"
+  }
+}
