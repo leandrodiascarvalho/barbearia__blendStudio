@@ -3,8 +3,29 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
+# ── Dependências ──────────────────────────────────────
 node_modules/
+blend-backend/node_modules/
 
+# ── Ambiente (NUNCA commitar credenciais) ─────────────
+.env
+blend-backend/.env
+
+# ── Build / Compilados ────────────────────────────────
+blend-frontend/css/main.css
+blend-frontend/css/main.css.map
+
+# ── Logs ──────────────────────────────────────────────
+*.log
+npm-debug.log*
+
+# ── Sistema Operacional ───────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── Editor ────────────────────────────────────────────
+.vscode/settings.json
+.idea/
 # User-specific files
 *.rsuser
 *.suo

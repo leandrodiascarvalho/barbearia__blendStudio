@@ -1,13 +1,21 @@
 {
+  "name": "blend-studio-frontend",
+  "version": "2.0.0",
+  "description": "Frontend da Blend Studio Barbearia",
   "scripts": {
-    "scss:watch": "sass --watch blend-frontend/scss:blend-frontend/css",
-    "backend:install": "npm --prefix blend-backend install",
-    "backend:dev": "npm --prefix blend-backend run dev",
-    "backend:start": "npm --prefix blend-backend start",
-    "dev": "concurrently \"npm run scss:watch\" \"npm run backend:dev\""
+    "dev": "npm run scss:watch",
+    "build": "npm run scss:build",
+    "scss:watch": "sass blend-frontend/scss/main.scss blend-frontend/css/main.css --watch --style=expanded --source-map",
+    "scss:build": "sass blend-frontend/scss/main.scss blend-frontend/css/main.css --style=compressed --no-source-map",
+    "copy:bootstrap": "node scripts/copy-bootstrap.js",
+    "postinstall": "npm run copy:bootstrap"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3"
   },
   "devDependencies": {
-    "concurrently": "^10.0.3",
-    "sass": "^1.101.0"
+    "sass": "^1.77.6"
   }
 }
