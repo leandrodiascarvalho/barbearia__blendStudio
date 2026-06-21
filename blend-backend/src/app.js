@@ -17,7 +17,7 @@ const { cors: corsCfg } = require('./config/security');
 const securityHeaders  = require('./middlewares/securityHeaders');
 const { apiLimiter }   = require('./middlewares/rateLimiter');
 const errorHandler     = require('./middlewares/errorHandler');
-const simplybookRoutes = require('./routes/simplybook');
+const calcomRoutes     = require('./routes/calcom.routes');
 
 const app = express();
 
@@ -63,7 +63,7 @@ app.use(
 // ─── 8. ROTAS DA API ──────────────────────────────────────────────
 // Rate limiter geral aplicado a toda a API
 app.use('/api', apiLimiter);
-app.use('/api/simplybook', simplybookRoutes);
+app.use('/api/calcom', calcomRoutes);
 
 // ─── 9. ROTA DE SAÚDE (Health Check) ─────────────────────────────
 // Usada por monitoramento (UptimeRobot, load balancer, etc.)

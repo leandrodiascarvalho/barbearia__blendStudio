@@ -20,7 +20,7 @@ module.exports = {
       ? env.ALLOWED_ORIGIN
       : ['http://localhost:3000', 'http://127.0.0.1:3000', 'http://localhost:5500'], // Adicionado 5500 para Live Server
 
-    methods: ['GET', 'POST', 'DELETE'],       // Adicionado DELETE para cancelar agendamento
+    methods: ['GET', 'POST'],                // Cal.com v2 usa POST para cancelar/reagendar
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: false,             // Não usar cookies cross-origin
     optionsSuccessStatus: 200,      // Compatibilidade com IE11
@@ -57,7 +57,8 @@ module.exports = {
       formAction:  ["'self'"],
       // Em produção, adicione um endpoint para receber violações de CSP:
       // reportUri:  ['/api/csp-report'],
-      upgradeInsecureRequests: IS_PROD ? [] : undefined,
+      // upgradeInsecureRequests só é aplicado em produção (com HTTPS)
+      ...(IS_PROD && { upgradeInsecureRequests: [] }),
     },
     reportOnly: false, // true = só loga, não bloqueia (útil para testar)
   },
