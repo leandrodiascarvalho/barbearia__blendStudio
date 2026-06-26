@@ -1,0 +1,242 @@
+// Agendamento (Booking) page styles
+.agendamento-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/booking-hero.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 150px 0 100px;
+  text-align: center;
+  color: $text-light;
+  
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    
+    span {
+      color: $gold;
+    }
+  }
+  
+  p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+  }
+}
+
+.agendamento-section {
+  padding: 4rem 0;
+  
+  .booking-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: $border-radius-lg;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    
+    .booking-steps {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+      position: relative;
+      
+      &::before {
+        content: '';
+        position: absolute;
+        top: 20px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background-color: #e0e0e0;
+        z-index: 1;
+      }
+      
+      .step {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        flex: 1;
+        
+        .step-circle {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background-color: #e0e0e0;
+          color: $text-dark;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0 auto 0.5rem;
+          font-weight: 700;
+          transition: all 0.3s ease;
+        }
+        
+        .step-label {
+          font-size: 0.9rem;
+          color: $text-muted;
+        }
+        
+        &.active .step-circle {
+          background-color: $gold;
+          color: white;
+        }
+        
+        &.completed .step-circle {
+          background-color: $primary;
+          color: white;
+        }
+      }
+    }
+    
+    .booking-form {
+      .form-group {
+        margin-bottom: 1.5rem;
+        
+        label {
+          display: block;
+          margin-bottom: 0.5rem;
+          font-weight: 600;
+          color: $dark;
+        }
+        
+        .form-control {
+          width: 100%;
+          padding: 0.75rem;
+          border: 1px solid #ddd;
+          border-radius: $border-radius;
+          font-size: 1rem;
+          
+          &:focus {
+            outline: none;
+            border-color: $gold;
+            box-shadow: 0 0 0 3px rgba($gold, 0.2);
+          }
+        }
+        
+        select.form-control {
+          cursor: pointer;
+        }
+        
+        .time-slots {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+          gap: 0.5rem;
+          margin-top: 0.5rem;
+          
+          .time-slot {
+            padding: 0.75rem;
+            border: 2px solid #ddd;
+            border-radius: $border-radius;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            
+            &:hover {
+              border-color: $primary;
+              background-color: rgba($primary, 0.1);
+            }
+            
+            &.selected {
+              background-color: $gold;
+              border-color: $gold;
+              color: white;
+            }
+            
+            &.unavailable {
+              opacity: 0.5;
+              cursor: not-allowed;
+              background-color: #f5f5f5;
+            }
+          }
+        }
+      }
+      
+      .btn-submit {
+        width: 100%;
+        padding: 1rem;
+        background-color: $gold;
+        color: white;
+        border: none;
+        border-radius: $border-radius;
+        font-size: 1.1rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        
+        &:hover {
+          background-color: darken($gold, 10%);
+          transform: translateY(-2px);
+        }
+      }
+    }
+    
+    .booking-summary {
+      background-color: lighten($light, 3%);
+      padding: 1.5rem;
+      border-radius: $border-radius;
+      margin-top: 2rem;
+      
+      h3 {
+        color: $dark;
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+      }
+      
+      .summary-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid #e0e0e0;
+        
+        &:last-child {
+          border-bottom: none;
+          font-weight: 700;
+          color: $gold;
+          font-size: 1.1rem;
+        }
+        
+        .label {
+          color: $text-muted;
+        }
+        
+        .value {
+          color: $dark;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+.booking-confirmation {
+  text-align: center;
+  padding: 3rem 0;
+  
+  .confirmation-icon {
+    font-size: 5rem;
+    color: $gold;
+    margin-bottom: 1rem;
+  }
+  
+  h2 {
+    color: $dark;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    color: $text-muted;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .agendamento-section .booking-container .booking-steps {
+    .step-label {
+      font-size: 0.7rem;
+    }
+    
+    .step-circle {
+      width: 30px !important;
+      height: 30px !important;
+      font-size: 0.9rem;
+    }
+  }
+}

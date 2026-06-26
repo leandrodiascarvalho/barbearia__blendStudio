@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agendamento - Blend Studio</title>
+  
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../css/vendor/bootstrap.min.css">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="../css/vendor/bootstrap-icons.min.css">
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+  
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">
+        <i class="bi bi-scissors"></i> BLEND STUDIO
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Início</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="servicos.html">Serviços</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contato</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-gold px-4 ms-2" href="agendamento.html">Agendar</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Agendamento Hero -->
+  <section class="agendamento-hero">
+    <div class="container">
+      <h1>Faça seu <span>Agendamento</span></h1>
+      <p>Escolha o serviço, profissional e horário que melhor se encaixa na sua agenda</p>
+    </div>
+  </section>
+
+  <!-- Agendamento Section -->
+  <section class="agendamento-section">
+    <div class="container">
+      <div class="booking-container">
+        <!-- Steps -->
+        <div class="booking-steps">
+          <div class="step active" data-step="1">
+            <div class="step-circle">1</div>
+            <div class="step-label">Serviço</div>
+          </div>
+          <div class="step" data-step="2">
+            <div class="step-circle">2</div>
+            <div class="step-label">Profissional</div>
+          </div>
+          <div class="step" data-step="3">
+            <div class="step-circle">3</div>
+            <div class="step-label">Data/Hora</div>
+          </div>
+          <div class="step" data-step="4">
+            <div class="step-circle">4</div>
+            <div class="step-label">Confirmação</div>
+          </div>
+        </div>
+
+        <!-- Step 1: Serviço -->
+        <div class="booking-step-content" id="step1">
+          <h3 class="mb-4">Selecione o Serviço</h3>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <div class="service-option p-3 border rounded cursor-pointer" data-service="corte-classico" data-price="50">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <h5 class="mb-1">Corte Clássico</h5>
+                    <small class="text-muted">Corte tradicional com tesoura e máquina</small>
+                  </div>
+                  <span class="text-gold fw-bold">R$ 50,00</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <div class="service-option p-3 border rounded cursor-pointer" data-service="barba" data-price="35">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <h5 class="mb-1">Barba Completa</h5>
+                    <small class="text-muted">Modelagem com toalha quente</small>
+                  </div>
+                  <span class="text-gold fw-bold">R$ 35,00</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <div class="service-option p-3 border rounded cursor-pointer" data-service="fade" data-price="60">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <h5 class="mb-1">Fade / Degradê</h5>
+                    <small class="text-muted">Degradê perfeito</small>
+                  </div>
+                  <span class="text-gold fw-bold">R$ 60,00</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <div class="service-option p-3 border rounded cursor-pointer" data-service="completo" data-price="80">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <h5 class="mb-1">Servico Completo</h5>
+                    <small class="text-muted">Corte + Barba</small>
+                  </div>
+                  <span class="text-gold fw-bold">R$ 80,00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4 text-end">
+            <button class="btn btn-gold btn-next" data-next="2">Continuar</button>
+          </div>
+        </div>
+
+        <!-- Step 2: Profissional -->
+        <div class="booking-step-content d-none" id="step2">
+          <h3 class="mb-4">Escolha o Profissional</h3>
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="professional-option p-3 border rounded text-center cursor-pointer" data-professional="joao">
+                <img src="../images/barber-1.jpg" alt="João Silva" class="rounded-circle mb-2" width="100" height="100">
+                <h5>João Silva</h5>
+                <small class="text-muted">Barbeiro Master</small>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="professional-option p-3 border rounded text-center cursor-pointer" data-professional="carlos">
+                <img src="../images/barber-2.jpg" alt="Carlos Santos" class="rounded-circle mb-2" width="100" height="100">
+                <h5>Carlos Santos</h5>
+                <small class="text-muted">Barbeiro</small>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="professional-option p-3 border rounded text-center cursor-pointer" data-professional="pedro">
+                <img src="../images/barber-3.jpg" alt="Pedro Oliveira" class="rounded-circle mb-2" width="100" height="100">
+                <h5>Pedro Oliveira</h5>
+                <small class="text-muted">Barbeiro</small>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4 d-flex justify-content-between">
+            <button class="btn btn-outline-secondary btn-prev" data-prev="1">Voltar</button>
+            <button class="btn btn-gold btn-next" data-next="3">Continuar</button>
+          </div>
+        </div>
+
+        <!-- Step 3: Data e Hora -->
+        <div class="booking-step-content d-none" id="step3">
+          <h3 class="mb-4">Escolha Data e Horário</h3>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label class="form-label">Data</label>
+              <input type="date" class="form-control" id="booking-date">
+            </div>
+            <div class="col-md-6 mb-3">
+              <label class="form-label">Horário</label>
+              <div class="time-slots" id="time-slots">
+                <div class="time-slot" data-time="09:00">09:00</div>
+                <div class="time-slot" data-time="09:30">09:30</div>
+                <div class="time-slot" data-time="10:00">10:00</div>
+                <div class="time-slot" data-time="10:30">10:30</div>
+                <div class="time-slot" data-time="11:00">11:00</div>
+                <div class="time-slot" data-time="11:30">11:30</div>
+                <div class="time-slot" data-time="14:00">14:00</div>
+                <div class="time-slot" data-time="14:30">14:30</div>
+                <div class="time-slot" data-time="15:00">15:00</div>
+                <div class="time-slot" data-time="15:30">15:30</div>
+                <div class="time-slot" data-time="16:00">16:00</div>
+                <div class="time-slot" data-time="16:30">16:30</div>
+                <div class="time-slot" data-time="17:00">17:00</div>
+                <div class="time-slot" data-time="17:30">17:30</div>
+                <div class="time-slot" data-time="18:00">18:00</div>
+                <div class="time-slot" data-time="18:30">18:30</div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4">
+            <h4 class="mb-3">Seus Dados</h4>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label class="form-label">Nome Completo</label>
+                <input type="text" class="form-control" id="client-name" placeholder="Digite seu nome">
+              </div>
+              <div class="col-md-6 mb-3">
+                <label class="form-label">Telefone</label>
+                <input type="tel" class="form-control" id="client-phone" placeholder="(XX) XXXXX-XXXX">
+              </div>
+              <div class="col-md-12 mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" id="client-email" placeholder="seu@email.com">
+              </div>
+            </div>
+          </div>
+          <div class="mt-4 d-flex justify-content-between">
+            <button class="btn btn-outline-secondary btn-prev" data-prev="2">Voltar</button>
+            <button class="btn btn-gold btn-confirm" id="btn-confirm">Confirmar Agendamento</button>
+          </div>
+        </div>
+
+        <!-- Step 4: Confirmação -->
+        <div class="booking-step-content d-none" id="step4">
+          <div class="booking-confirmation">
+            <div class="confirmation-icon">
+              <i class="bi bi-check-circle-fill"></i>
+            </div>
+            <h2>Agendamento Confirmado!</h2>
+            <p>Seu horário foi reservado com sucesso. Enviamos os detalhes para seu email.</p>
+            
+            <div class="booking-summary mt-4">
+              <h3>Resumo do Agendamento</h3>
+              <div class="summary-item">
+                <span class="label">Serviço:</span>
+                <span class="value" id="summary-service">-</span>
+              </div>
+              <div class="summary-item">
+                <span class="label">Profissional:</span>
+                <span class="value" id="summary-professional">-</span>
+              </div>
+              <div class="summary-item">
+                <span class="label">Data:</span>
+                <span class="value" id="summary-date">-</span>
+              </div>
+              <div class="summary-item">
+                <span class="label">Horário:</span>
+                <span class="value" id="summary-time">-</span>
+              </div>
+              <div class="summary-item">
+                <span class="label">Cliente:</span>
+                <span class="value" id="summary-client">-</span>
+              </div>
+              <div class="summary-item">
+                <span class="label">Total:</span>
+                <span class="value" id="summary-total">-</span>
+              </div>
+            </div>
+            
+            <div class="mt-4">
+              <a href="../index.html" class="btn btn-gold btn-lg">Voltar ao Início</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3><i class="bi bi-scissors"></i> BLEND STUDIO</h3>
+          <p>Mais que uma barbearia, uma experiência de estilo e tradição.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Contato</h3>
+          <p><i class="bi bi-telephone"></i> (11) 99999-9999</p>
+          <p><i class="bi bi-envelope"></i> contato@blendstudio.com.br</p>
+        </div>
+        <div class="footer-section">
+          <h3>Horários</h3>
+          <p>Segunda a Sexta: 9h às 20h</p>
+          <p>Sábado: 9h às 18h</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Blend Studio Barbearia. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="../js/vendor/bootstrap.bundle.min.js"></script>
+  <!-- Agendamento JS -->
+  <script src="../js/agendamento-page.js"></script>
+</body>
+
+</html>

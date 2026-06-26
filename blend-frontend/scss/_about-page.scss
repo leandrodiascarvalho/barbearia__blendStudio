@@ -1,0 +1,85 @@
+// About page styles
+.about-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/about-hero.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 150px 0 100px;
+  text-align: center;
+  color: $text-light;
+  
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    
+    span {
+      color: $gold;
+    }
+  }
+}
+
+.about-section {
+  .section-title {
+    color: $dark;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background-color: $gold;
+    }
+  }
+  
+  .about-image {
+    border-radius: $border-radius-lg;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+}
+
+.team-section {
+  background-color: lighten($light, 2%);
+  
+  .team-member {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: $border-radius-lg;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    }
+    
+    img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1.5rem;
+      border: 4px solid $gold;
+    }
+    
+    h3 {
+      color: $dark;
+      margin-bottom: 0.5rem;
+    }
+    
+    .role {
+      color: $primary;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+  }
+}

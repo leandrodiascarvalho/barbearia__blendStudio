@@ -1,0 +1,39 @@
+// Cores principais
+$primary: #d4a373;
+$secondary: #2c2c2c;
+$dark: #1a1a1a;
+$light: #f8f9fa;
+$gold: #c9a55c;
+
+// Cores de texto
+$text-dark: #333;
+$text-light: #fff;
+$text-muted: #6c757d;
+
+// Fontes
+$font-family-sans-serif: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+// Variáveis do Bootstrap
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "dark": $dark,
+  "light": $light,
+  "gold": $gold
+);
+
+// Espaçamento
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3
+);
+
+// Border radius
+$border-radius: 0.375rem;
+$border-radius-lg: 0.5rem;
+$border-radius-xl: 1rem;

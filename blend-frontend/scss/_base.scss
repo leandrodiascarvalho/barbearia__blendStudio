@@ -1,0 +1,61 @@
+// Estilos base
+body {
+  font-family: $font-family-sans-serif;
+  color: $text-dark;
+  background-color: $light;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+  
+  &:hover {
+    color: darken($primary, 10%);
+  }
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.section-padding {
+  padding: 80px 0;
+}
+
+.btn-primary {
+  background-color: $primary;
+  border-color: $primary;
+  
+  &:hover {
+    background-color: darken($primary, 10%);
+    border-color: darken($primary, 10%);
+  }
+}
+
+.btn-gold {
+  background-color: $gold;
+  border-color: $gold;
+  color: $text-light;
+  
+  &:hover {
+    background-color: darken($gold, 10%);
+    border-color: darken($gold, 10%);
+    color: $text-light;
+  }
+}
+
+.text-gold {
+  color: $gold;
+}
+
+.bg-dark {
+  background-color: $dark !important;
+}

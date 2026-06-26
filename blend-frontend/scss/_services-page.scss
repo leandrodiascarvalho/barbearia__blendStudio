@@ -1,0 +1,101 @@
+// Services page styles
+.services-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/services-hero.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 150px 0 100px;
+  text-align: center;
+  color: $text-light;
+  
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    
+    span {
+      color: $gold;
+    }
+  }
+}
+
+.services-section {
+  .service-card {
+    background: white;
+    border-radius: $border-radius-lg;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin-bottom: 2rem;
+    
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    }
+    
+    .service-image {
+      height: 200px;
+      overflow: hidden;
+      
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+    }
+    
+    &:hover .service-image img {
+      transform: scale(1.1);
+    }
+    
+    .service-content {
+      padding: 1.5rem;
+      
+      h3 {
+        color: $dark;
+        margin-bottom: 0.5rem;
+        font-size: 1.5rem;
+      }
+      
+      .price {
+        color: $gold;
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+      
+      p {
+        color: $text-muted;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+      }
+      
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.price-list {
+  .price-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px dotted $text-muted;
+    
+    &:last-child {
+      border-bottom: none;
+    }
+    
+    .service-name {
+      font-weight: 600;
+      color: $dark;
+    }
+    
+    .service-price {
+      color: $gold;
+      font-weight: 700;
+      font-size: 1.25rem;
+    }
+  }
+}
