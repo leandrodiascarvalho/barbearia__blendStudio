@@ -1,0 +1,36 @@
+// Modal styles
+.modal {
+  .modal-content {
+    border-radius: $border-radius-lg;
+    border: none;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  }
+  
+  .modal-header {
+    background-color: $dark;
+    color: $text-light;
+    border-radius: $border-radius-lg $border-radius-lg 0 0;
+    border-bottom: 2px solid $gold;
+    
+    .modal-title {
+      font-weight: 700;
+    }
+    
+    .btn-close {
+      filter: brightness(0) invert(1);
+    }
+  }
+  
+  .modal-body {
+    padding: 2rem;
+  }
+  
+  .modal-footer {
+    border-top: 1px solid $light;
+    padding: 1rem 2rem;
+  }
+}
+
+.modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.7);
+}

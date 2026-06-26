@@ -1,14 +1,225 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Blend Studio - Barbearia</title>
+  
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="css/vendor/bootstrap-icons.min.css">
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
+  
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="bi bi-scissors"></i> BLEND STUDIO
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Início</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/about.html">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/servicos.html">Serviços</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/contact.html">Contato</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-gold px-4 ms-2" href="pages/agendamento.html">Agendar</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content fade-in">
+      <h1>Bem-vindo à <span>Blend Studio</span></h1>
+      <p>Estilo e tradição em cada corte. Experimente o melhor da barbearia clássica com um toque moderno.</p>
+      <div class="hero-btns">
+        <a href="pages/agendamento.html" class="btn btn-gold btn-lg">Agendar Horário</a>
+        <a href="pages/servicos.html" class="btn btn-outline-light btn-lg">Nossos Serviços</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Preview -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Nossos Serviços</h2>
+        <p class="text-muted">Confira alguns dos nossos serviços mais populares</p>
+      </div>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="service-card slide-in-left">
+            <div class="service-image">
+              <img src="images/service-classic.jpg" alt="Corte Clássico">
+            </div>
+            <div class="service-content">
+              <h3>Corte Clássico</h3>
+              <p class="price">R$ 50,00</p>
+              <p>Corte tradicional com tesoura e máquina, acabado na navalha.</p>
+              <a href="pages/agendamento.html" class="btn btn-primary">Agendar</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="service-card fade-in">
+            <div class="service-image">
+              <img src="images/service-beard.jpg" alt="Barba">
+            </div>
+            <div class="service-content">
+              <h3>Barba Completa</h3>
+              <p class="price">R$ 35,00</p>
+              <p>Modelagem de barba com toalha quente e produtos premium.</p>
+              <a href="pages/agendamento.html" class="btn btn-primary">Agendar</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="service-card slide-in-right">
+            <div class="service-image">
+              <img src="images/service-fade.jpg" alt="Fade">
+            </div>
+            <div class="service-content">
+              <h3>Fade / Degradê</h3>
+              <p class="price">R$ 60,00</p>
+              <p>Degradê perfeito com acabamento impecável.</p>
+              <a href="pages/agendamento.html" class="btn btn-primary">Agendar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <a href="pages/servicos.html" class="btn btn-gold btn-lg">Ver Todos os Serviços</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Preview -->
+  <section class="section-padding bg-light">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4">
+          <img src="images/about-lounge.jpg" alt="Sobre a Blend" class="img-fluid about-image slide-in-left">
+        </div>
+        <div class="col-md-6 mb-4 slide-in-right">
+          <h2 class="section-title">Sobre a Blend Studio</h2>
+          <p class="lead">Mais que uma barbearia, uma experiência única.</p>
+          <p>Fundada em 2020, a Blend Studio nasceu da paixão pela barbearia clássica combinada com técnicas modernas. Nosso ambiente foi cuidadosamente projetado para oferecer conforto e sofisticação.</p>
+          <p>Nossa equipe é formada por profissionais altamente qualificados, prontos para transformar seu visual e proporcionar momentos de relaxamento.</p>
+          <a href="pages/about.html" class="btn btn-gold mt-3">Saiba Mais</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="section-padding team-section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Nossa Equipe</h2>
+        <p class="text-muted">Conheça os profissionais que vão cuidar do seu estilo</p>
+      </div>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="team-member fade-in">
+            <img src="images/barber-1.jpg" alt="João Silva">
+            <h3>João Silva</h3>
+            <p class="role">Barbeiro Master</p>
+            <p>Especialista em cortes clássicos e barbas com mais de 10 anos de experiência.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="team-member fade-in">
+            <img src="images/barber-2.jpg" alt="Carlos Santos">
+            <h3>Carlos Santos</h3>
+            <p class="role">Barbeiro</p>
+            <p>Mestre em degradês e designs modernos. Sempre atualizado com as últimas tendências.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="team-member fade-in">
+            <img src="images/barber-3.jpg" alt="Pedro Oliveira">
+            <h3>Pedro Oliveira</h3>
+            <p class="role">Barbeiro</p>
+            <p>Especialista em visagismo e consultoria de imagem pessoal.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section-padding bg-dark text-white text-center">
+    <div class="container">
+      <h2 class="mb-4">Pronto para transformar seu visual?</h2>
+      <p class="lead mb-4">Agende seu horário agora mesmo e experimente o melhor atendimento da cidade.</p>
+      <a href="pages/agendamento.html" class="btn btn-gold btn-lg pulse">Agendar Agora</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3><i class="bi bi-scissors"></i> BLEND STUDIO</h3>
+          <p>Mais que uma barbearia, uma experiência de estilo e tradição.</p>
+          <div class="social-links">
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Links Rápidos</h3>
+          <a href="index.html">Início</a>
+          <a href="pages/about.html">Sobre</a>
+          <a href="pages/servicos.html">Serviços</a>
+          <a href="pages/agendamento.html">Agendar</a>
+          <a href="pages/contact.html">Contato</a>
+        </div>
+        <div class="footer-section">
+          <h3>Horários</h3>
+          <p>Segunda a Sexta: 9h às 20h</p>
+          <p>Sábado: 9h às 18h</p>
+          <p>Domingo: Fechado</p>
+        </div>
+        <div class="footer-section">
+          <h3>Contato</h3>
+          <p><i class="bi bi-geo-alt"></i> Rua das Barbas, 123 - Centro</p>
+          <p><i class="bi bi-telephone"></i> (11) 99999-9999</p>
+          <p><i class="bi bi-envelope"></i> contato@blendstudio.com.br</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Blend Studio Barbearia. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="js/vendor/bootstrap.bundle.min.js"></script>
+  <!-- Main JS -->
+  <script src="js/agendamento.js"></script>
 </body>
 
 </html>

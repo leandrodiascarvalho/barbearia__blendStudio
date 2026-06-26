@@ -1,0 +1,33 @@
+// Navbar styles
+.navbar {
+  background-color: $dark;
+  padding: 1rem 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: $gold !important;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.nav-link {
+  color: $text-light !important;
+  font-weight: 500;
+  margin-left: 1rem;
+  transition: color 0.3s ease;
+  
+  &:hover {
+    color: $gold !important;
+  }
+}
+
+.navbar-toggler {
+  border-color: $gold;
+  
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23c9a55c' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+}
