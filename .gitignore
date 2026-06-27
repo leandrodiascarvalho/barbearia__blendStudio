@@ -1,20 +1,30 @@
 ```
+# Compiled and build artifacts
+*.css.map
+*.js.map
+*.min.css
+*.min.js
+dist/
+build/
+
 # Dependencies
 node_modules/
-
-# Environment
-.env
-.env.local
-.env.*
-
-# Logs and temp files
-*.log
-*.tmp
 
 # Editors
 .vscode/
 .idea/
 
-# Package manager
-package-lock.json
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+
+# Environment
+.env
+.env.local
+*.env.*
+
+# OS generated files
+.DS_Store
+Thumbs.db
 ```

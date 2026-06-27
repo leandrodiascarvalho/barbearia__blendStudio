@@ -1,61 +1,149 @@
-// Estilos base
+// Estilos base - Blend Studio Premium
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: $font-family-sans-serif;
+  font-family: $font-family-body;
   color: $text-dark;
   background-color: $light;
-  line-height: 1.6;
+  line-height: 1.8;
+  font-weight: 300;
+  letter-spacing: 0.3px;
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-sans-serif;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
+h1 { font-size: 3.5rem; }
+h2 { font-size: 2.8rem; }
+h3 { font-size: 2rem; }
+h4 { font-size: 1.5rem; }
+
 a {
-  color: $primary;
+  color: $gold;
   text-decoration: none;
+  transition: all 0.3s ease;
   
   &:hover {
-    color: darken($primary, 10%);
+    color: darken($gold, 15%);
   }
 }
 
 .container {
-  max-width: 1200px;
-  padding: 0 15px;
+  max-width: 1400px;
+  padding: 0 30px;
   margin: 0 auto;
 }
 
 .section-padding {
-  padding: 80px 0;
+  padding: 100px 0;
+  
+  @media (max-width: 768px) {
+    padding: 60px 0;
+  }
+}
+
+.section-title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 3rem;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, $gold, transparent);
+  }
 }
 
 .btn-primary {
-  background-color: $primary;
-  border-color: $primary;
+  background: linear-gradient(135deg, $gold, darken($gold, 10%));
+  border: none;
+  padding: 1rem 2.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.4s ease;
+  box-shadow: 0 5px 20px rgba($gold, 0.3);
   
   &:hover {
-    background-color: darken($primary, 10%);
-    border-color: darken($primary, 10%);
+    background: linear-gradient(135deg, darken($gold, 5%), darken($gold, 15%));
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba($gold, 0.4);
   }
 }
 
 .btn-gold {
-  background-color: $gold;
-  border-color: $gold;
+  background: linear-gradient(135deg, $gold, darken($gold, 8%));
+  border: none;
   color: $text-light;
+  padding: 1rem 2.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.4s ease;
+  box-shadow: 0 5px 20px rgba($gold, 0.3);
   
   &:hover {
-    background-color: darken($gold, 10%);
-    border-color: darken($gold, 10%);
+    background: linear-gradient(135deg, lighten($gold, 5%), $gold);
     color: $text-light;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba($gold, 0.5);
+  }
+}
+
+.btn-outline-light {
+  border: 2px solid $text-light;
+  color: $text-light;
+  padding: 1rem 2.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.4s ease;
+  
+  &:hover {
+    background-color: $text-light;
+    color: $dark;
+    transform: translateY(-3px);
   }
 }
 
 .text-gold {
-  color: $gold;
+  color: $gold !important;
 }
 
 .bg-dark {
   background-color: $dark !important;
+}
+
+.bg-black {
+  background-color: $black !important;
+}
+
+.bg-graphite {
+  background-color: $graphite !important;
+}
+
+// Utilitários premium
+.premium-card {
+  background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba($gold, 0.2);
+  box-shadow: $box-shadow;
+}
+
+.gold-divider {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, $gold, transparent);
+  margin: 2rem 0;
 }

@@ -1,36 +1,120 @@
-// Modal styles
+// Modal styles - Premium Blend Studio
 .modal {
+  z-index: 2000;
+  
+  .modal-dialog {
+    max-width: 600px;
+    margin: 5% auto;
+  }
+  
   .modal-content {
-    border-radius: $border-radius-lg;
+    border-radius: $border-radius-xl;
     border: none;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(145deg, $dark, $graphite);
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba($gold, 0.2);
+    overflow: hidden;
+    animation: modalSlideIn 0.4s ease-out;
   }
   
   .modal-header {
-    background-color: $dark;
+    background: linear-gradient(135deg, rgba($gold, 0.1), rgba($gold, 0.05));
     color: $text-light;
-    border-radius: $border-radius-lg $border-radius-lg 0 0;
     border-bottom: 2px solid $gold;
+    padding: 1.5rem 2rem;
+    position: relative;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, $gold, transparent);
+    }
     
     .modal-title {
+      font-family: $font-family-sans-serif;
       font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: $gold;
     }
     
     .btn-close {
       filter: brightness(0) invert(1);
+      opacity: 0.7;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        opacity: 1;
+        transform: rotate(90deg);
+      }
     }
   }
   
   .modal-body {
-    padding: 2rem;
+    padding: 2.5rem;
+    color: rgba($text-light, 0.9);
+    line-height: 1.8;
+    
+    p {
+      margin-bottom: 1.5rem;
+    }
+    
+    strong {
+      color: $gold;
+    }
   }
   
   .modal-footer {
-    border-top: 1px solid $light;
-    padding: 1rem 2rem;
+    border-top: 1px solid rgba($text-light, 0.1);
+    padding: 1.5rem 2.5rem;
+    background: rgba($black, 0.3);
+    justify-content: center;
   }
 }
 
 .modal-backdrop {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(5px);
+}
+
+// Animação de entrada do modal
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+// Modal premium para confirmações
+.modal-premium {
+  .modal-content {
+    background: linear-gradient(145deg, $black, $dark);
+    border: 1px solid rgba($gold, 0.3);
+  }
+  
+  .confirmation-icon {
+    font-size: 5rem;
+    color: $gold;
+    margin-bottom: 1.5rem;
+    animation: scaleIn 0.6s ease-out;
+  }
+}
+
+@media (max-width: 768px) {
+  .modal {
+    .modal-dialog {
+      margin: 10% auto;
+    }
+    
+    .modal-body {
+      padding: 1.5rem;
+    }
+  }
 }

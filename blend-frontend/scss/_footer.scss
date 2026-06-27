@@ -1,52 +1,91 @@
-// Footer styles
+// Footer styles - Premium Blend Studio
 .footer {
-  background-color: $dark;
+  background: linear-gradient(135deg, $black, $dark);
   color: $text-light;
-  padding: 3rem 0 1.5rem;
-  margin-top: 4rem;
+  padding: 5rem 0 2rem;
+  margin-top: 5rem;
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, $gold, transparent);
+  }
   
   .footer-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-bottom: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    margin-bottom: 3rem;
     
     .footer-section {
       h3 {
+        font-family: $font-family-sans-serif;
         color: $gold;
-        margin-bottom: 1rem;
-        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+        font-size: 1.3rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        position: relative;
+        padding-bottom: 0.75rem;
+        
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 50px;
+          height: 2px;
+          background: $gold;
+        }
       }
       
       p, a {
-        color: lighten($text-light, 20%);
-        line-height: 1.8;
+        color: rgba($text-light, 0.7);
+        line-height: 2;
         display: block;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.75rem;
+        font-weight: 300;
+        transition: all 0.3s ease;
         
         &:hover {
           color: $gold;
+          padding-left: 5px;
         }
+      }
+      
+      i {
+        color: $gold;
+        margin-right: 10px;
       }
       
       .social-links {
         display: flex;
         gap: 1rem;
-        margin-top: 1rem;
+        margin-top: 1.5rem;
         
         a {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          width: 40px;
-          height: 40px;
+          width: 45px;
+          height: 45px;
           border-radius: 50%;
-          background-color: rgba(255, 255, 255, 0.1);
-          transition: all 0.3s ease;
+          background: linear-gradient(135deg, rgba($gold, 0.2), rgba($gold, 0.1));
+          border: 1px solid rgba($gold, 0.3);
+          color: $gold;
+          font-size: 1.2rem;
+          transition: all 0.4s ease;
           
           &:hover {
-            background-color: $gold;
-            transform: translateY(-3px);
+            background: linear-gradient(135deg, $gold, darken($gold, 10%));
+            color: $black;
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 10px 25px rgba($gold, 0.4);
           }
         }
       }
@@ -54,10 +93,86 @@
   }
   
   .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 1.5rem;
+    border-top: 1px solid rgba($text-light, 0.1);
+    padding-top: 2rem;
     text-align: center;
-    color: lighten($text-light, 20%);
+    color: rgba($text-light, 0.5);
     font-size: 0.9rem;
+    font-weight: 300;
+    
+    p {
+      margin: 0;
+    }
+  }
+}
+
+// WhatsApp floating button
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 65px;
+  height: 65px;
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+  box-shadow: 0 5px 25px rgba(#25D366, 0.4);
+  z-index: 1000;
+  transition: all 0.4s ease;
+  animation: pulse-whatsapp 2s infinite;
+  
+  &:hover {
+    transform: scale(1.15) rotate(15deg);
+    box-shadow: 0 10px 35px rgba(#25D366, 0.6);
+  }
+  
+  i {
+    margin: 0;
+  }
+}
+
+@keyframes pulse-whatsapp {
+  0% {
+    box-shadow: 0 0 0 0 rgba(#25D366, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(#25D366, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(#25D366, 0);
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 3rem 0 1.5rem;
+    
+    .footer-content {
+      gap: 2rem;
+      text-align: center;
+      
+      .footer-section {
+        h3::after {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        
+        .social-links {
+          justify-content: center;
+        }
+      }
+    }
+  }
+  
+  .whatsapp-float {
+    width: 55px;
+    height: 55px;
+    bottom: 20px;
+    right: 20px;
+    font-size: 1.6rem;
   }
 }
