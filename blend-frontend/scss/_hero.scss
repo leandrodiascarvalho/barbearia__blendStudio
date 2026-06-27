@@ -1,50 +1,167 @@
-// Hero section styles
+// Hero section styles - Premium Blend Studio
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/hero.jpg') no-repeat center center;
+  background: linear-gradient(135deg, rgba($black, 0.85), rgba($dark, 0.75)), 
+              url('../images/hero.jpg') no-repeat center center;
   background-size: cover;
+  background-attachment: fixed;
   height: 100vh;
-  min-height: 600px;
+  min-height: 700px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: $text-light;
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at center, transparent 0%, rgba($black, 0.4) 100%);
+    pointer-events: none;
+  }
 }
 
 .hero-content {
-  max-width: 800px;
-  padding: 2rem;
+  max-width: 900px;
+  padding: 3rem;
+  position: relative;
+  z-index: 2;
   
   h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1.5rem;
+    font-family: $font-family-sans-serif;
+    font-size: 4.5rem;
+    margin-bottom: 2rem;
     text-transform: uppercase;
-    letter-spacing: 3px;
+    letter-spacing: 8px;
+    line-height: 1.1;
+    text-shadow: 0 5px 30px rgba(0, 0, 0, 0.5);
     
     span {
+      display: block;
       color: $gold;
+      font-size: 5rem;
+      margin-top: 0.5rem;
+      background: linear-gradient(135deg, $gold, $gold-light, $gold);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 3s infinite;
     }
   }
   
   p {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
-    opacity: 0.9;
+    font-size: 1.4rem;
+    margin-bottom: 3rem;
+    opacity: 0.95;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
   }
 }
 
 .hero-btns {
   .btn {
-    margin: 0.5rem;
-    padding: 0.75rem 2rem;
-    font-size: 1.1rem;
+    margin: 0.75rem;
+    padding: 1rem 3rem;
+    font-size: 1rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    transition: all 0.4s ease;
   }
 }
 
-@media (max-width: 768px) {
+// Animação shimmer para o texto dourado
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+// Efeito de partículas/dust
+.hero-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  
+  .particle {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: rgba($gold, 0.6);
+    border-radius: 50%;
+    animation: float 15s infinite;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 991px) {
   .hero-content h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    
+    span {
+      font-size: 3.5rem;
+    }
+  }
+  
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    min-height: 500px;
+  }
+  
+  .hero-content {
+    padding: 1.5rem;
+    
+    h1 {
+      font-size: 2.2rem;
+      
+      span {
+        font-size: 2.5rem;
+      }
+    }
+    
+    p {
+      font-size: 0.95rem;
+    }
+  }
+  
+  .hero-btns {
+    .btn {
+      padding: 0.75rem 1.5rem;
+      font-size: 0.85rem;
+      margin: 0.5rem;
+    }
   }
 }

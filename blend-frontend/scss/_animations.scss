@@ -1,8 +1,10 @@
-// Animations
-@keyframes fadeIn {
+// Animations - Premium Blend Studio
+
+// Fade In Up
+@keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(40px);
   }
   to {
     opacity: 1;
@@ -10,10 +12,23 @@
   }
 }
 
+// Fade In Down
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Slide In Left
 @keyframes slideInLeft {
   from {
     opacity: 0;
-    transform: translateX(-50px);
+    transform: translateX(-80px);
   }
   to {
     opacity: 1;
@@ -21,10 +36,11 @@
   }
 }
 
+// Slide In Right
 @keyframes slideInRight {
   from {
     opacity: 0;
-    transform: translateX(50px);
+    transform: translateX(80px);
   }
   to {
     opacity: 1;
@@ -32,27 +48,166 @@
   }
 }
 
-@keyframes pulse {
+// Pulse (Botões)
+@keyframes pulseBtn {
   0%, 100% {
     transform: scale(1);
+    box-shadow: 0 5px 20px rgba($gold, 0.3);
   }
   50% {
     transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba($gold, 0.5);
   }
 }
 
+// Shimmer (Efeito dourado brilhante)
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+// Float (Elementos flutuantes)
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+// Glow (Brilho dourado)
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba($gold, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba($gold, 0.6), 0 0 60px rgba($gold, 0.3);
+  }
+}
+
+// Scale In
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+// Rotate In
+@keyframes rotateIn {
+  from {
+    opacity: 0;
+    transform: rotate(-180deg) scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0) scale(1);
+  }
+}
+
+// Classes de animação
 .fade-in {
-  animation: fadeIn 0.6s ease-out forwards;
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.fade-in-delay-1 {
+  animation: fadeInUp 0.8s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+.fade-in-delay-2 {
+  animation: fadeInUp 0.8s ease-out 0.4s forwards;
+  opacity: 0;
+}
+
+.fade-in-delay-3 {
+  animation: fadeInUp 0.8s ease-out 0.6s forwards;
+  opacity: 0;
 }
 
 .slide-in-left {
-  animation: slideInLeft 0.6s ease-out forwards;
+  animation: slideInLeft 0.8s ease-out forwards;
+  opacity: 0;
 }
 
 .slide-in-right {
-  animation: slideInRight 0.6s ease-out forwards;
+  animation: slideInRight 0.8s ease-out forwards;
+  opacity: 0;
 }
 
 .pulse {
-  animation: pulse 2s infinite;
+  animation: pulseBtn 2s ease-in-out infinite;
+}
+
+.shimmer {
+  background: linear-gradient(90deg, $gold, lighten($gold, 20%), $gold);
+  background-size: 200% auto;
+  animation: shimmer 3s infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+.scale-in {
+  animation: scaleIn 0.6s ease-out forwards;
+}
+
+.rotate-in {
+  animation: rotateIn 0.8s ease-out forwards;
+}
+
+// Scroll animations (elementos que aparecem ao scrollar)
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+  
+  &.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Hover effects premium
+.hover-lift {
+  transition: all 0.4s ease;
+  
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: $box-shadow-lg;
+  }
+}
+
+.hover-glow {
+  transition: all 0.4s ease;
+  
+  &:hover {
+    box-shadow: 0 0 30px rgba($gold, 0.5);
+  }
+}
+
+.hover-scale {
+  transition: all 0.4s ease;
+  
+  &:hover {
+    transform: scale(1.05);
+  }
 }
